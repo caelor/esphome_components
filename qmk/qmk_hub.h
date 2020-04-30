@@ -3,9 +3,6 @@
 #include "esphome/core/component.h"
 #include "esphome/components/uart/uart.h"
 
-#define QMK_LEDS 6
-#define HEARTBEAT_FREQUENCY 30000
-
 namespace esphome {
 namespace qmk {
 
