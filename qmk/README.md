@@ -49,7 +49,7 @@ used on pins D2 and D3. Data flows TX pin -> RX pin, bidirectionally (e.g. QMK P
 Using the reference hardware and the config above:
 
 Gherkin Pin | D1 Mini Pin
-------------+------------
+----------- | -----------
 2 | D3
 3 | D2
 
@@ -61,7 +61,7 @@ The protocol is a simple packetised protocol running at 9600 baud, as follows:
 Packet length: 1 byte
 
 Packet | Usage
--------+------
+------ | -----
 0x00 | Sync request. Sent by QMK if heartbeats have not been received for a period of time
 0x01 | Key 1 pressed
 0x02 | Key 2 pressed
@@ -82,7 +82,7 @@ Packet | Usage
 Pcket length: 4 bytes
 
 Packet | Usage
--------+------
+------ | -----
 0x00 0x00 0x00 0x00 | Sync packet type 1
 0x00 0x00 0x00 0x01 | Sync packet type 2
 0x00 0x00 0x00 0x02 | Heartbeat. Sent periodically by ESPHome. QMK will request a resync if a heartbeat is not received for some time.
